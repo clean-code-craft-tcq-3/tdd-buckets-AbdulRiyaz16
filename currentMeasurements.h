@@ -9,6 +9,7 @@
 
 int *sortArray(int *inputArray, int size);
 int getRange(int *currentSamples);
+int isSamplesConsecutive(int currentNumber, int nextNumber);
 
 
 
