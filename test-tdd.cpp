@@ -1,7 +1,8 @@
-#include <stdio.h>
-#include <stdbool.h>
-#include <stdlib.h>
+#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+
+#include "test/catch.hpp"
 #include "currentMeasurements.h"
+
 
 /******************************************************************************************************
 FEATURE 1 : The return Value for {4,5} from getRange should be 1 .
