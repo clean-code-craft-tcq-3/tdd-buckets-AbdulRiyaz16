@@ -3,12 +3,12 @@
 #include <stdlib.h>
 #include "currentMeasurements.h"
 
-int *sortArray(int *inputArray, int size)
+int *sortArray(int *inputArray, int length)
 {
     int temp = 0;    
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < length; i++)
     {     
-        for (int j = i+1; j < size; j++)
+        for (int j = i+1; j < length; j++)
         {     
            if(inputArray[i] > inputArray[j])
            {    
