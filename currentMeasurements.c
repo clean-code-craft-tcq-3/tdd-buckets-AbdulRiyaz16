@@ -21,9 +21,24 @@ int *sortArray(int *inputArray, int size)
     return inputArray;
 }
 
+int isSamplesConsecutive(int currentNumber, int nextNumber)
+{
+    int sampleDifference = nextNumber - currentNumber ;
+    if (sampleDifference == 0 || sampleDifference == 1)
+        return 1;
+    return 0 ;
+}
+
 int getRange(int *currentSamples)
 {
   int length =(int)ARRAYLENGTH(currentSamples);
+  int numberOfConsecutiveNumbers=1, numberOfRanges=0, startRangeNumber=inputArray[0], endRangeNumber = inputArray[0];
   currentSamples=sortArray(currentSamples,length);
+  
+    for (int arrayIndex=0; arrayIndex<size; arrayIndex++){
+        if (isSamplesConsecutive(currentSamples[arrayIndex], currentSamples[arrayIndex+1])){
+            numberOfConsecutiveNumbers++;
+            endRangeNumber = currentSamples[arrayIndex+1];
+        }
   return 0;
 }
