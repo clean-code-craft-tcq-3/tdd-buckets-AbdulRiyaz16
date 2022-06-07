@@ -32,14 +32,20 @@ int isSamplesConsecutive(int currentNumber, int nextNumber)
 int getRange(int *currentSamples)
 {
   int length =(int)ARRAYLENGTH(currentSamples);
-  int numberOfConsecutiveNumbers=1, numberOfRanges=0, startRangeNumber=currentSamples[0], endRangeNumber = currentSamples[0];
+  int numberOfConsecutiveNumbers=1, numberOfRanges=0, firstSample=currentSamples[0], LastSample = currentSamples[0];
   currentSamples=sortArray(currentSamples,length);
   
     for (int arrayIndex=0; arrayIndex<length; arrayIndex++){
-        if (isSamplesConsecutive(currentSamples[arrayIndex], currentSamples[arrayIndex+1])){
+        if (isSamplesConsecutive(currentSamples[arrayIndex], currentSamples[arrayIndex+1]))
+        {
             numberOfConsecutiveNumbers++;
-            endRangeNumber = currentSamples[arrayIndex+1];
+            LastSample = currentSamples[arrayIndex+1];
+        }
+        else
+        {
+            numberOfRanges++;
+        
         }
     }
-  return 0;
+  return numberOfRanges;
 }
