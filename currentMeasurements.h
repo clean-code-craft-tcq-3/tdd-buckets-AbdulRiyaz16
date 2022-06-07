@@ -7,6 +7,7 @@
 
 #define ARRAYLENGTH(x)  (sizeof(x) / sizeof((x)[0]))
 
+int *sortArray(int *inputArray, int size);
 int getRange(int *currentSamples);
 
 
