@@ -5,6 +5,9 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
+#define ARRAYLENGTH(x)  (sizeof(x) / sizeof((x)[0]))
+
+int getRange(int *currentSamples);
 
 
 
